@@ -1,0 +1,126 @@
+
+====================================================================================================
+CATEGORÍAS MÁS DISTINTIVAS DE CADA CLUSTER FRENTE A LOS OTROS DOS (lift = % cluster / máx % otros)
+====================================================================================================
+
+######## Cluster 0 — top 15 rasgos exclusivos (lift > 1 = más frecuente que en CUALQUIERA de los otros dos)
+                  dimension                   variable  cluster                                                     categoria  %cluster  %otros_max  lift
+     Demografía y geografía                 edad_rango        0                                                         18-24     35.18       16.09  2.19
+Plataforma y vía de entrada        relacion_tv_abierta        0                                           Nunca ve TV abierta     16.63        9.20  1.81
+   Comportamiento y hábitos        relacion_parasocial        0 Fuerte (siente cercanía con creadores, los sigue activamente)     47.71       27.59  1.73
+   Comportamiento y hábitos           genera_contenido        0                         Creador activo (publica regularmente)     55.66       32.76  1.70
+   Comportamiento y hábitos    pertenencia_comunidades        0       Activa (participa en grupos o comunidades regularmente)     64.58       39.08  1.65
+Plataforma y vía de entrada plataforma_video_principal        0                                                        TikTok     24.58       15.52  1.58
+   Comportamiento y hábitos        franja_horaria_pico        0                                                     Madrugada     10.84        7.47  1.45
+     Demografía y geografía                 edad_rango        0                                                         25-39     50.36       37.36  1.35
+                 Motivación            motivo_primario        0                                     Identidad y autoexpresión     15.42       11.49  1.34
+Plataforma y vía de entrada                via_llegada        0         Algoritmo de la plataforma (recomendación automática)     28.92       21.84  1.32
+Plataforma y vía de entrada                via_llegada        0                       Redes sociales (publicación o historia)     19.28       14.60  1.32
+   Comportamiento y hábitos             binge_watching        0                           Frecuente (varias veces por semana)     24.10       18.25  1.32
+Plataforma y vía de entrada        relacion_tv_abierta        0                                     La abandonó por streaming     19.28       14.94  1.29
+     Demografía y geografía                    estrato        0                                                             1     17.59       13.87  1.27
+                 Motivación            motivo_primario        0                                           Hábito y pasatiempo     21.93       17.82  1.23
+
+######## Cluster 1 — top 15 rasgos exclusivos (lift > 1 = más frecuente que en CUALQUIERA de los otros dos)
+                    dimension                   variable  cluster                                                    categoria  %cluster  %otros_max  lift
+  Plataforma y vía de entrada plataforma_video_principal        1                                                      Ninguna     14.11        6.32  2.23
+       Demografía y geografía                 edad_rango        1                                                          56+     30.90       14.37  2.15
+     Comportamiento y hábitos    pertenencia_comunidades        1               Ninguna (no participa en comunidades en línea)     19.22        9.20  2.09
+  Plataforma y vía de entrada        relacion_tv_abierta        1                  TV abierta sigue siendo su fuente principal     29.93       15.52  1.93
+     Comportamiento y hábitos        relacion_parasocial        1          Inexistente (no sigue creadores ni influenciadores)     16.55        9.77  1.69
+     Comportamiento y hábitos           genera_contenido        1                             Consumidor pasivo (solo observa)     40.39       24.14  1.67
+Necesidades y gratificaciones      gratificacion_buscada        1                                                 Estar al día     11.92        7.47  1.60
+     Comportamiento y hábitos        relacion_parasocial        1              Débil (los ve pero no siente conexión personal)     39.17       24.71  1.59
+  Plataforma y vía de entrada         rol_diseno_digital        1                                       Bajo (casi no lo nota)     23.36       15.90  1.47
+                   Motivación            motivo_primario        1                                                  Información     22.63       15.52  1.46
+     Comportamiento y hábitos    pertenencia_comunidades        1 Ocasional (entra a foros o grupos solo cuando necesita algo)     25.06       17.24  1.45
+     Comportamiento y hábitos           genera_contenido        1                 Reactivo (comenta y comparte, rara vez crea)     25.79       18.39  1.40
+Necesidades y gratificaciones             necesidad_base        1                                        Seguridad informativa     13.14       10.34  1.27
+Necesidades y gratificaciones             necesidad_base        1                                                   Curiosidad     17.52       13.79  1.27
+  Plataforma y vía de entrada         rol_diseno_digital        1                                                  Indiferente     13.14       10.36  1.27
+
+######## Cluster 2 — top 15 rasgos exclusivos (lift > 1 = más frecuente que en CUALQUIERA de los otros dos)
+                    dimension              variable  cluster                                              categoria  %cluster  %otros_max  lift
+  Plataforma y vía de entrada      disposicion_pago        2                                                   Alta     91.95        6.27 14.68
+       Demografía y geografía               estrato        2                                                      5     24.14        3.86  6.26
+       Demografía y geografía       nivel_educativo        2                                               Posgrado     24.14        6.02  4.01
+       Demografía y geografía               estrato        2                                                      4     22.41        9.25  2.42
+     Comportamiento y hábitos    contexto_visionado        2                                   Solo/a en computador     13.22        8.67  1.52
+  Plataforma y vía de entrada    rol_diseno_digital        2             Determinante (elige o abandona por diseño)     21.26       14.46  1.47
+Necesidades y gratificaciones tension_gratificacion        2 Satisfacción plena (coincide lo buscado y lo obtenido)     31.03       22.87  1.36
+       Demografía y geografía       nivel_educativo        2                                          Universitario     31.03       26.28  1.18
+  Plataforma y vía de entrada   relacion_tv_abierta        2                              Complementaria (ve ambas)     40.80       35.66  1.14
+  Plataforma y vía de entrada   relacion_tv_abierta        2   Solo eventos especiales (deportes, noticias en vivo)     19.54       17.35  1.13
+  Plataforma y vía de entrada           via_llegada        2                        Recomendación de amigos/familia     27.01       24.33  1.11
+     Comportamiento y hábitos        binge_watching        2                            Ocasional (fines de semana)     36.78       33.33  1.10
+                   Motivación       motivo_primario        2                                     Interacción social     23.56       21.45  1.10
+Necesidades y gratificaciones        necesidad_base        2                                            Pertenencia     16.67       15.18  1.10
+     Comportamiento y hábitos        patron_consumo        2                     De fondo (mientras hace otra cosa)     19.54       17.83  1.10
+
+====================================================================================================
+NUMÉRICAS: MEDIA POR CLUSTER (en negrita conceptual: el máximo de cada fila)
+====================================================================================================
+cluster                             0         1         2  cluster_max cluster_min
+horas_diarias_redes              4.22      2.80      3.46            0           1
+num_redes_usadas                 6.05      4.37      5.30            0           1
+gasto_mensual_contenido_cop  11426.13  11122.95  72476.49            2           1
+ug_entretenimiento               4.27      4.01      4.12            0           1
+ug_informacion                   3.21      4.05      3.74            1           0
+ug_identidad                     3.71      3.00      3.33            0           1
+ug_interaccion_social            4.14      3.75      3.95            0           1
+ug_evasion                       3.80      3.41      3.36            0           2
+ug_pasar_tiempo                  4.11      3.61      3.88            0           1
+horas_video_dia                  2.64      1.60      2.06            0           1
+edad                            29.69     47.82     39.48            1           0
+estrato                          2.55      2.57      3.85            2           0
+comparacion_social               4.02      3.15      3.48            0           1
+nivel_fomo                       4.38      3.31      3.75            0           1
+
+====================================================================================================
+CONSUMO SOCIAL vs. INDIVIDUAL (% por cluster)
+====================================================================================================
+cluster                                          0     1     2  Total
+ve_solo/a                                     39.8  30.9  39.1   36.0
+ve_acompañado/a (familia/pareja/amigos)       49.4  56.9  51.1   52.8
+ve_en_familia_TV                              25.8  35.0  29.3   30.2
+ve_con_amigos                                  7.2   4.1   6.3    5.8
+patron_consumo_social(ver juntos y comentar)  11.3   9.2   8.6   10.0
+gratif_tener_de_que_hablar/compartir          16.4  14.1  16.1   15.4
+creador_activo_u_ocasional                    81.0  33.8  57.5   57.5
+reactivo(comenta/comparte)                    13.7  25.8  18.4   19.5
+consumidor_pasivo                              5.3  40.4  24.1   23.0
+comunidad_activa                              64.6  21.4  39.1   42.4
+sin_comunidades                                1.7  19.2   9.2   10.2
+parasocial_fuerte                             47.7  11.2  27.6   29.2
+llega_por_recom_amigos/familia                20.2  24.3  27.0   23.1
+llega_por_redes_sociales                      19.3  14.6  12.6   16.2
+
+====================================================================================================
+RIESGO DE ABANDONO vs. FIDELIZACIÓN — PROXIES (% por cluster)
+====================================================================================================
+cluster                                            0     1     2  Total
+indiferencia                                    15.4  15.3   7.5   14.0
+frustracion_alta                                11.1  10.0   8.0   10.1
+frustracion_total                               25.3  24.1  20.7   24.0
+descubrimiento_positivo                         14.7  15.8  15.5   15.3
+satisfaccion_plena                              20.0  22.9  31.0   23.1
+riesgo_desplazamiento_alto                      45.3  29.9  35.6   37.3
+solo+algoritmo                                  10.6   8.0   9.8    9.4
+zapping_entre_plataformas                       11.3   9.2   8.6   10.0
+fragmentado(pausa y retoma)                     15.9  20.0  13.2   17.1
+de_fondo                                        17.8  14.8  19.5   16.9
+maraton_frecuente                               28.0  21.4  17.8   23.5
+un_episodio_por_sesion                          18.6  27.7  28.7   24.1
+diseño_determinante(elige/abandona por diseño)  14.5   8.8  21.3   13.3
+sensibilidad_precio_alta                        52.3  48.7  12.6   43.9
+
+Índice compuesto de vulnerabilidad (promedio simple de: indiferencia, frustración total, riesgo desplazamiento alto, zapping):
+cluster
+0    24.3
+1    19.6
+2    18.1
+Índice compuesto de fidelización (promedio simple de: satisfacción plena, descubrimiento positivo, riesgo desplazamiento BAJO):
+cluster
+0    20.7
+1    24.7
+2    27.4
