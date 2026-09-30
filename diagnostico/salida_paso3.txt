@@ -1,0 +1,139 @@
+
+====================================================================================================
+A. VERIFICACIÓN DE LAS 9 VARIABLES
+====================================================================================================
+horas_diarias_redes            existe=True  numérica=True  dtype=float64
+num_redes_usadas               existe=True  numérica=True  dtype=int64
+gasto_mensual_contenido_cop    existe=True  numérica=True  dtype=int64
+ug_entretenimiento             existe=True  numérica=True  dtype=int64
+ug_informacion                 existe=True  numérica=True  dtype=int64
+ug_identidad                   existe=True  numérica=True  dtype=int64
+ug_interaccion_social          existe=True  numérica=True  dtype=int64
+ug_evasion                     existe=True  numérica=True  dtype=int64
+ug_pasar_tiempo                existe=True  numérica=True  dtype=int64
+
+====================================================================================================
+B. FALTANTES Y PROBLEMAS EN LAS 9 VARIABLES
+====================================================================================================
+                                n  faltantes  %_faltantes  infinitos  min       max  varianza_cero
+horas_diarias_redes          1000          0          0.0          0  0.3       7.8          False
+num_redes_usadas             1000          0          0.0          0  1.0       9.0          False
+gasto_mensual_contenido_cop  1000          0          0.0          0  0.0  116524.0          False
+ug_entretenimiento           1000          0          0.0          0  2.0       5.0          False
+ug_informacion               1000          0          0.0          0  1.0       5.0          False
+ug_identidad                 1000          0          0.0          0  1.0       5.0          False
+ug_interaccion_social        1000          0          0.0          0  2.0       5.0          False
+ug_evasion                   1000          0          0.0          0  1.0       5.0          False
+ug_pasar_tiempo              1000          0          0.0          0  1.0       5.0          False
+
+Registros con al menos un faltante: 0
+Filas duplicadas en las 9 variables: 1
+Ceros en gasto_mensual_contenido_cop: 322
+
+====================================================================================================
+C. ESTANDARIZACIÓN (StandardScaler: z = (x - media) / desv. poblacional)
+====================================================================================================
+                              media_antes  desv_antes (ddof=0)  media_despues  desv_despues (ddof=0)
+horas_diarias_redes              3.505200             1.332274       0.000000               1.000000
+num_redes_usadas                 5.229000             1.710719      -0.000000               1.000000
+gasto_mensual_contenido_cop 21,924.284000        27,367.547006       0.000000               1.000000
+ug_entretenimiento               4.137000             0.718492       0.000000               1.000000
+ug_informacion                   3.648000             0.947679      -0.000000               1.000000
+ug_identidad                     3.352000             0.979845       0.000000               1.000000
+ug_interaccion_social            3.947000             0.782426      -0.000000               1.000000
+ug_evasion                       3.561000             0.866186       0.000000               1.000000
+ug_pasar_tiempo                  3.864000             0.798438       0.000000               1.000000
+
+Comprobación scaler.mean_ == media_antes: True
+Comprobación scaler.scale_ == desv_antes: True
+
+====================================================================================================
+E. K-MEANS  k=4  random_state=42  n_init=10  init='k-means++'
+====================================================================================================
+Iteraciones hasta converger: 30
+
+Primeros 10 registros con su cluster:
+      id  horas_diarias_redes  num_redes_usadas  gasto_mensual_contenido_cop  ug_entretenimiento  ug_informacion  ug_identidad  ug_interaccion_social  ug_evasion  ug_pasar_tiempo  cluster
+AUD-0001                  4.5                 5                            0                   3               5             4                      3           3                3        2
+AUD-0002                  4.3                 5                          667                   4               4             4                      4           5                5        1
+AUD-0003                  4.9                 4                         5593                   4               3             1                      5           2                4        0
+AUD-0004                  1.7                 8                            0                   4               4             5                      4           4                4        2
+AUD-0005                  3.7                 6                        20363                   5               3             2                      4           4                4        0
+AUD-0006                  4.6                 6                        11285                   5               3             3                      4           4                4        1
+AUD-0007                  5.4                 6                        23486                   4               4             3                      5           3                2        1
+AUD-0008                  2.7                 5                        32711                   5               4             4                      4           4                4        1
+AUD-0009                  5.6                 7                            0                   4               4             5                      4           2                4        1
+AUD-0010                  3.2                 5                        84378                   2               4             3                      3           3                4        3
+
+====================================================================================================
+F. TAMAÑO DE CADA CLUSTER
+====================================================================================================
+         registros  porcentaje
+cluster                       
+0            260.0        26.0
+1            331.0        33.1
+2            257.0        25.7
+3            152.0        15.2
+Total       1000.0       100.0
+
+====================================================================================================
+G. INERCIA Y SILUETA
+====================================================================================================
+Inercia (suma de distancias² intra-cluster, en unidades estandarizadas): 6960.91
+Inercia total de los datos (= n × p = 1000 × 9): 9000.00
+Proporción de varianza entre clusters (1 - inercia/total): 0.227
+Coeficiente de silueta promedio: 0.0971
+
+Silueta promedio por cluster y % de registros con silueta negativa:
+   silueta_media  %_negativa
+0         0.0721         8.8
+1         0.1236         0.0
+2         0.0918         0.4
+3         0.0914        13.2
+
+====================================================================================================
+CENTROIDES (apoyo técnico, sin interpretación)
+====================================================================================================
+En z-scores:
+    horas_diarias_redes  num_redes_usadas  gasto_mensual_contenido_cop  ug_entretenimiento  ug_informacion  ug_identidad  ug_interaccion_social  ug_evasion  ug_pasar_tiempo
+0                -0.28             -0.50                        -0.35                0.37            0.29         -0.93                  -0.41       -0.23            -0.23
+1                 0.66              0.58                        -0.35                0.30           -0.59          0.35                   0.22        0.26             0.31
+2                -0.54             -0.34                        -0.35               -0.79            0.41          0.49                   0.15       -0.01            -0.19
+3                -0.05              0.18                         1.96                0.05            0.11         -0.00                  -0.03       -0.14             0.03
+
+En unidades originales:
+    horas_diarias_redes  num_redes_usadas  gasto_mensual_contenido_cop  ug_entretenimiento  ug_informacion  ug_identidad  ug_interaccion_social  ug_evasion  ug_pasar_tiempo
+0                 3.13              4.37                     12326.78                4.40            3.92          2.44                   3.63        3.36             3.68
+1                 4.39              6.22                     12235.84                4.35            3.08          3.70                   4.12        3.79             4.11
+2                 2.79              4.65                     12348.38                3.57            4.04          3.83                   4.06        3.55             3.72
+3                 3.44              5.53                     75629.77                4.17            3.76          3.35                   3.92        3.44             3.89
+
+====================================================================================================
+ESTABILIDAD FRENTE A LA SEMILLA (ARI respecto a random_state=42)
+====================================================================================================
+random_state=    0  ARI=0.456
+random_state=    1  ARI=0.573
+random_state=    7  ARI=0.431
+random_state=  123  ARI=0.580
+random_state= 2025  ARI=0.866
+
+====================================================================================================
+H. PCA (2 componentes sobre los datos estandarizados)
+====================================================================================================
+PC1: 17.48%   PC2: 11.76%   Acumulada: 29.24%
+Varianza explicada por las 9 componentes (%): [17.48, 11.76, 11.48, 10.91, 10.62, 10.52, 9.54, 8.9, 8.8]
+
+Cargas (loadings) de PC1 y PC2:
+                               PC1    PC2
+horas_diarias_redes          0.477  0.102
+num_redes_usadas             0.502  0.012
+gasto_mensual_contenido_cop -0.028  0.697
+ug_entretenimiento           0.214  0.273
+ug_informacion              -0.453  0.059
+ug_identidad                 0.296 -0.146
+ug_interaccion_social        0.216  0.186
+ug_evasion                   0.207 -0.580
+ug_pasar_tiempo              0.302  0.185
+
+Gráfico guardado en: diagnostico/paso3_pca_k4.png
+Asignaciones guardadas en: diagnostico/paso3_asignacion_k4.csv
