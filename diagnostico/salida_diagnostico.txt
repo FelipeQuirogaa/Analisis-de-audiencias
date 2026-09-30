@@ -1,0 +1,548 @@
+
+====================================================================================================
+0. HOJAS DEL ARCHIVO
+====================================================================================================
+- Base de datos: (1001, 41)
+- Diccionario de variables: (42, 6)
+- Fuentes y supuestos: (41, 2)
+- Universo y expansión: (36, 7)
+- Estadística descriptiva: (19, 12)
+- Perfil de segmentos: (32, 5)
+- Datos+segmento: (1001, 31)
+- Validación Estadística: (15, 5)
+- Mapa de segmentos: (13, 3)
+
+Base de datos: 1000 filas x 41 columnas
+
+====================================================================================================
+1/8. VARIABLES: TIPO REAL (pandas) vs. DICCIONARIO
+====================================================================================================
+                     variable dtype_pandas       clase_real   tipo_diccionario                         grupo_diccionario                                                                                                       descripcion_diccionario  n_valores_unicos
+                           id          str Categórica/Texto              Texto                             Identificador                                                                                              Identificador único del registro              1000
+                         edad        int64         Numérica    Numérica (años)                           Demográfica (1)                                                                                     Edad del individuo (audiencia adulta 18+)                58
+                 grupo_etario          str Categórica/Texto         Categórica                    Demográfica (derivada)                                                                        Rango etario derivado de la edad (apoyo para análisis)                 6
+                       genero          str Categórica/Texto         Categórica                           Demográfica (2)                                                                                                              Género declarado                 3
+                      estrato        int64         Numérica        Ordinal 1–6                           Demográfica (3)                                                                                   Estrato socioeconómico de residencia (DANE)                 6
+                       region          str Categórica/Texto         Categórica                           Demográfica (4)                                                                                                     Región/zona de residencia                 8
+              nivel_educativo          str Categórica/Texto         Categórica                           Demográfica (5)                                                                                              Máximo nivel educativo alcanzado                 5
+           ug_entretenimiento        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (1)                                                                                    Gratificación: entretenimiento / diversión                 4
+               ug_informacion        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (2)                                                                           Gratificación: información / vigilancia del entorno                 5
+                 ug_identidad        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (3)                                                                             Gratificación: identidad personal / autoexpresión                 5
+        ug_interaccion_social        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (4)                                                                               Gratificación: integración e interacción social                 4
+                   ug_evasion        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (5)                                                                                               Gratificación: evasión / escape                 5
+              ug_pasar_tiempo        int64         Numérica         Likert 1–5 Psicográfica – Usos y Gratificaciones (6)                                                                                       Gratificación: pasar el tiempo / hábito                 5
+        dispositivo_principal          str Categórica/Texto         Categórica                     Hábito de consumo (1)                                                                           Dispositivo principal de acceso a contenido digital                 4
+          horas_diarias_redes      float64         Numérica   Numérica (horas)                     Hábito de consumo (2)                                                                                       Tiempo diario dedicado a redes sociales                67
+          franja_horaria_pico          str Categórica/Texto         Categórica                     Hábito de consumo (3)                                                                                               Franja horaria de mayor consumo                 4
+             num_redes_usadas        int64         Numérica    Numérica entera                     Hábito de consumo (4)                                                                                        Número de redes sociales usadas al mes                 9
+         red_social_principal          str Categórica/Texto         Categórica                      Consumo efectivo (1)                                                                                         Red social a la que dedica más tiempo                 6
+   plataforma_video_principal          str Categórica/Texto         Categórica                      Consumo efectivo (2)                                                                                             Plataforma de video más consumida                 7
+categoria_contenido_preferida          str Categórica/Texto         Categórica                      Consumo efectivo (3)                                                                                              Categoría de contenido preferida                 8
+            formato_preferido          str Categórica/Texto         Categórica                      Consumo efectivo (4)                                                                                                Formato de contenido preferido                 6
+  gasto_mensual_contenido_cop        int64         Numérica Numérica (COP/mes)                            Gasto efectivo                                                                              Gasto mensual en suscripciones/contenido digital               678
+             disposicion_pago          str Categórica/Texto            Ordinal                       Disposición al pago                                                                                   Disposición declarada a pagar por contenido                 4
+           contexto_visionado          str Categórica/Texto         Categórica                   Contexto de consumo (1)                        Contexto social y espacial en el que consume contenido audiovisual (solo, familia, pareja, transporte)                 6
+                  via_llegada          str Categórica/Texto         Categórica                   Contexto de consumo (2)                                                                       Mecanismo principal por el que descubre nuevo contenido                 7
+               patron_consumo          str Categórica/Texto         Categórica                   Contexto de consumo (3)                                                                                Ritmo o patrón habitual de consumo audiovisual                 6
+           rol_diseno_digital          str Categórica/Texto Categórica ordinal                Experiencia de usuario (1)                                          Grado en que el diseño UX/UI de las plataformas influye en sus decisiones de consumo                 5
+          relacion_tv_abierta          str Categórica/Texto         Categórica                   Contexto de consumo (4)                                                          Relación actual del individuo con la televisión abierta/convencional                 5
+        tension_gratificacion          str Categórica/Texto         Categórica Psicográfica – Usos y Gratificaciones (7)                   Percepción de la brecha entre la gratificación que busca en medios digitales y la que efectivamente obtiene                 6
+              motivo_primario          str Categórica/Texto         Categórica           Psicográfica – Motivacional (1)                          Motivación dominante para el consumo de medios digitales, derivada del perfil de gratificaciones U&G                 6
+               necesidad_base          str Categórica/Texto         Categórica           Psicográfica – Motivacional (2)                              Necesidad subyacente que impulsa el consumo de medios (nivel de abstracción mayor que el motivo)                 9
+        gratificacion_buscada          str Categórica/Texto         Categórica Psicográfica – Usos y Gratificaciones (8)                                                  Gratificación específica que el individuo busca al consumir medios digitales                15
+              horas_video_dia      float64         Numérica   Numérica (horas)                     Hábito de consumo (5)                                          Tiempo diario dedicado al consumo de video (plataformas de streaming, YouTube, etc.)                57
+               binge_watching          str Categórica/Texto Categórica ordinal                     Hábito de consumo (6)                                                     Frecuencia con la que ve múltiples episodios o videos en una misma sesión                 5
+             genera_contenido          str Categórica/Texto Categórica ordinal                Comportamiento digital (1)                                                                Nivel de creación de contenido propio en plataformas digitales                 4
+           comparacion_social        int64         Numérica         Likert 1–5  Psicográfica – Comportamiento social (1)                                          Grado en que la persona se compara con otros a partir de lo que ve en redes sociales                 5
+                   nivel_fomo        int64         Numérica         Likert 1–5  Psicográfica – Comportamiento social (2)                           Intensidad del temor a perderse contenido, eventos o conversaciones que ocurren en medios digitales                 5
+          relacion_parasocial          str Categórica/Texto Categórica ordinal  Psicográfica – Comportamiento social (3)                                        Percepción de cercanía o vínculo personal con creadores de contenido o influenciadores                 4
+      pertenencia_comunidades          str Categórica/Texto Categórica ordinal                Comportamiento digital (2)                                                                Nivel de participación en comunidades, grupos o foros en línea                 4
+          sensibilidad_precio          str Categórica/Texto Categórica ordinal                        Gasto efectivo (2)                                    Grado de sensibilidad al precio al decidir sobre suscripciones o contenido digital de pago                 3
+     riesgo_gratif_desplazada          str Categórica/Texto Categórica ordinal Psicográfica – Usos y Gratificaciones (9) Riesgo de que la gratificación obtenida desplace a la buscada (por ejemplo, buscar información y terminar en entretenimiento)                 3
+
+Variables en diccionario pero NO en la base: ninguna
+Variables en la base pero NO en diccionario: ninguna
+Columnas con espacios al inicio/fin en el nombre: ninguna
+
+====================================================================================================
+2. CLASIFICACIÓN NUMÉRICA / CATEGÓRICA (según dtype real)
+====================================================================================================
+Numéricas (14): ['edad', 'estrato', 'ug_entretenimiento', 'ug_informacion', 'ug_identidad', 'ug_interaccion_social', 'ug_evasion', 'ug_pasar_tiempo', 'horas_diarias_redes', 'num_redes_usadas', 'gasto_mensual_contenido_cop', 'horas_video_dia', 'comparacion_social', 'nivel_fomo']
+Categóricas/texto (27): ['id', 'grupo_etario', 'genero', 'region', 'nivel_educativo', 'dispositivo_principal', 'franja_horaria_pico', 'red_social_principal', 'plataforma_video_principal', 'categoria_contenido_preferida', 'formato_preferido', 'disposicion_pago', 'contexto_visionado', 'via_llegada', 'patron_consumo', 'rol_diseno_digital', 'relacion_tv_abierta', 'tension_gratificacion', 'motivo_primario', 'necesidad_base', 'gratificacion_buscada', 'binge_watching', 'genera_contenido', 'relacion_parasocial', 'pertenencia_comunidades', 'sensibilidad_precio', 'riesgo_gratif_desplazada']
+
+====================================================================================================
+3. DESCRIPTIVOS DE VARIABLES NUMÉRICAS (desv. estándar muestral, n-1)
+====================================================================================================
+                             n_validos      media  mediana   desv_std  minimo    maximo     rango  faltantes     CV  asimetria  n_unicos
+edad                              1000     38.848     36.0     14.636    18.0      75.0      57.0          0  0.377      0.536        58
+estrato                           1000      2.786      3.0      1.191     1.0       6.0       5.0          0  0.427      0.590         6
+ug_entretenimiento                1000      4.137      4.0      0.719     2.0       5.0       3.0          0  0.174     -0.421         4
+ug_informacion                    1000      3.648      4.0      0.948     1.0       5.0       4.0          0  0.260     -0.313         5
+ug_identidad                      1000      3.352      3.0      0.980     1.0       5.0       4.0          0  0.292     -0.202         5
+ug_interaccion_social             1000      3.947      4.0      0.783     2.0       5.0       3.0          0  0.198     -0.296         4
+ug_evasion                        1000      3.561      4.0      0.867     1.0       5.0       4.0          0  0.243     -0.179         5
+ug_pasar_tiempo                   1000      3.864      4.0      0.799     1.0       5.0       4.0          0  0.207     -0.211         5
+horas_diarias_redes               1000      3.505      3.5      1.333     0.3       7.8       7.5          0  0.380      0.008        67
+num_redes_usadas                  1000      5.229      5.0      1.712     1.0       9.0       8.0          0  0.327     -0.044         9
+gasto_mensual_contenido_cop       1000  21924.284   9564.5  27381.241     0.0  116524.0  116524.0          0  1.249      1.355       678
+horas_video_dia                   1000      2.114      2.0      1.163     0.2       6.5       6.3          0  0.550      0.758        57
+comparacion_social                1000      3.567      4.0      1.002     1.0       5.0       4.0          0  0.281     -0.295         5
+nivel_fomo                        1000      3.831      4.0      1.013     1.0       5.0       4.0          0  0.264     -0.468         5
+
+====================================================================================================
+4. FRECUENCIAS DE VARIABLES CATEGÓRICAS (se excluye 'id')
+====================================================================================================
+
+--- grupo_etario  | categorías: 6 | faltantes: 0
+              frecuencia  porcentaje
+grupo_etario                        
+25-34                264        26.4
+35-44                210        21.0
+18-24                194        19.4
+45-54                162        16.2
+55-64                110        11.0
+65+                   60         6.0
+
+--- genero  | categorías: 3 | faltantes: 0
+           frecuencia  porcentaje
+genero                           
+Femenino          505        50.5
+Masculino         488        48.8
+Otro                7         0.7
+
+--- region  | categorías: 8 | faltantes: 0
+                 frecuencia  porcentaje
+region                                 
+Bogotá                  199        19.9
+Región Caribe           174        17.4
+Antioquia               173        17.3
+Santanderes             101        10.1
+Valle del Cauca          92         9.2
+Región Central           89         8.9
+Eje Cafetero             88         8.8
+Otras regiones           84         8.4
+
+--- nivel_educativo  | categorías: 5 | faltantes: 0
+                     frecuencia  porcentaje
+nivel_educativo                            
+Secundaria                  302        30.2
+Técnico/Tecnológico         297        29.7
+Universitario               270        27.0
+Posgrado                     90         9.0
+Primaria o menos             41         4.1
+
+--- dispositivo_principal  | categorías: 4 | faltantes: 0
+                       frecuencia  porcentaje
+dispositivo_principal                        
+Smartphone                    786        78.6
+Computador                     93         9.3
+Smart TV                       92         9.2
+Tablet                         29         2.9
+
+--- franja_horaria_pico  | categorías: 4 | faltantes: 0
+                     frecuencia  porcentaje
+franja_horaria_pico                        
+Noche                       570        57.0
+Tarde                       218        21.8
+Mañana                      129        12.9
+Madrugada                    83         8.3
+
+--- red_social_principal  | categorías: 6 | faltantes: 0
+                      frecuencia  porcentaje
+red_social_principal                        
+WhatsApp                     270        27.0
+Instagram                    208        20.8
+Facebook                     176        17.6
+TikTok                       156        15.6
+YouTube                      137        13.7
+X (Twitter)                   53         5.3
+
+--- plataforma_video_principal  | categorías: 7 | faltantes: 0
+                            frecuencia  porcentaje
+plataforma_video_principal                        
+YouTube                            289        28.9
+Netflix                            227        22.7
+TikTok                             182        18.2
+Ninguna                             84         8.4
+Disney+                             82         8.2
+Prime Video                         79         7.9
+Max                                 57         5.7
+
+--- categoria_contenido_preferida  | categorías: 8 | faltantes: 0
+                               frecuencia  porcentaje
+categoria_contenido_preferida                        
+Música                                176        17.6
+Entretenimiento/Humor                 156        15.6
+Gastronomía                           127        12.7
+Viajes                                126        12.6
+Deportes                              123        12.3
+Noticias                              112        11.2
+Tecnología                             97         9.7
+Educación                              83         8.3
+
+--- formato_preferido  | categorías: 6 | faltantes: 0
+                     frecuencia  porcentaje
+formato_preferido                          
+Video corto                 269        26.9
+Video largo                 227        22.7
+Texto/artículos             137        13.7
+Imágenes                    136        13.6
+Podcast/Audio               129        12.9
+Transmisión en vivo         102        10.2
+
+--- disposicion_pago  | categorías: 4 | faltantes: 0
+                  frecuencia  porcentaje
+disposicion_pago                        
+Ninguna                  315        31.5
+Baja                     268        26.8
+Media                    214        21.4
+Alta                     203        20.3
+
+--- contexto_visionado  | categorías: 6 | faltantes: 0
+                                     frecuencia  porcentaje
+contexto_visionado                                         
+En familia (TV/pantalla compartida)         302        30.2
+Solo/a en smartphone                        266        26.6
+En pareja                                   168        16.8
+En transporte/desplazamiento                112        11.2
+Solo/a en computador                         94         9.4
+Con amigos                                   58         5.8
+
+--- via_llegada  | categorías: 7 | faltantes: 0
+                                                       frecuencia  porcentaje
+via_llegada                                                                  
+Algoritmo de la plataforma (recomendación automática)         244        24.4
+Recomendación de amigos/familia                               231        23.1
+Redes sociales (publicación o historia)                       162        16.2
+Búsqueda activa (barra de búsqueda)                           153        15.3
+Mención en medios/prensa                                       76         7.6
+Tendencias/trending                                            70         7.0
+Publicidad digital                                             64         6.4
+
+--- patron_consumo  | categorías: 6 | faltantes: 0
+                                             frecuencia  porcentaje
+patron_consumo                                                     
+Un episodio por sesión                              241        24.1
+Maratón (varios episodios seguidos)                 219        21.9
+Fragmentado (pausar y retomar días después)         171        17.1
+De fondo (mientras hace otra cosa)                  169        16.9
+Consumo social (ver juntos y comentar)              100        10.0
+Zapping entre plataformas                           100        10.0
+
+--- rol_diseno_digital  | categorías: 5 | faltantes: 0
+                                              frecuencia  porcentaje
+rol_diseno_digital                                                  
+Moderado (lo percibe pero no decide por eso)         288        28.8
+Importante (lo nota y le influye)                    277        27.7
+Bajo (casi no lo nota)                               188        18.8
+Determinante (elige o abandona por diseño)           133        13.3
+Indiferente                                          114        11.4
+
+--- relacion_tv_abierta  | categorías: 5 | faltantes: 0
+                                                      frecuencia  porcentaje
+relacion_tv_abierta                                                         
+Complementaria (ve ambas)                                    356        35.6
+TV abierta sigue siendo su fuente principal                  196        19.6
+Solo eventos especiales (deportes, noticias en vivo)         177        17.7
+La abandonó por streaming                                    153        15.3
+Nunca ve TV abierta                                          118        11.8
+
+--- tension_gratificacion  | categorías: 6 | faltantes: 0
+                                                           frecuencia  porcentaje
+tension_gratificacion                                                            
+Satisfacción parcial (encuentra algo pero no exactamente)         236        23.6
+Satisfacción plena (coincide lo buscado y lo obtenido)            231        23.1
+Obtiene más de lo que busca (descubrimiento positivo)             153        15.3
+Indiferencia (consume sin expectativa clara)                      140        14.0
+Frustración leve (demasiado contenido, difícil elegir)            139        13.9
+Frustración alta (no encuentra lo que busca)                      101        10.1
+
+--- motivo_primario  | categorías: 6 | faltantes: 0
+                           frecuencia  porcentaje
+motivo_primario                                  
+Interacción social                206        20.6
+Entretenimiento                   191        19.1
+Hábito y pasatiempo               188        18.8
+Información                       160        16.0
+Evasión y escape                  134        13.4
+Identidad y autoexpresión         121        12.1
+
+--- necesidad_base  | categorías: 9 | faltantes: 0
+                       frecuencia  porcentaje
+necesidad_base                               
+Distracción y placer          223        22.3
+Descanso emocional            185        18.5
+Pertenencia                   142        14.2
+Curiosidad                    141        14.1
+Seguridad informativa          99         9.9
+Conexión emocional             72         7.2
+Reconocimiento                 60         6.0
+Autoexpresión                  53         5.3
+Control del entorno            25         2.5
+
+--- gratificacion_buscada  | categorías: 15 | faltantes: 0
+                            frecuencia  porcentaje
+gratificacion_buscada                             
+Relajación                         170        17.0
+Diversión y risa                   111        11.1
+Compartir experiencias              80         8.0
+Estar al día                        79         7.9
+Llenar el tiempo libre              77         7.7
+Tener de qué hablar                 74         7.4
+Desconectarse de la rutina          67         6.7
+Expresar quién soy                  59         5.9
+Aprender algo nuevo                 56         5.6
+Emoción y suspenso                  56         5.6
+Sentirse acompañado/a               52         5.2
+Descubrir gustos propios            33         3.3
+Vivir otras realidades              32         3.2
+Inspiración creativa                29         2.9
+Tomar mejores decisiones            25         2.5
+
+--- binge_watching  | categorías: 5 | faltantes: 0
+                                     frecuencia  porcentaje
+binge_watching                                             
+Rara vez                                    331        33.1
+Ocasional (fines de semana)                 324        32.4
+Frecuente (varias veces por semana)         203        20.3
+Nunca                                       110        11.0
+Siempre que puede                            32         3.2
+
+--- genera_contenido  | categorías: 4 | faltantes: 0
+                                              frecuencia  porcentaje
+genera_contenido                                                    
+Creador activo (publica regularmente)                358        35.8
+Consumidor pasivo (solo observa)                     230        23.0
+Creador ocasional (publica a veces)                  217        21.7
+Reactivo (comenta y comparte, rara vez crea)         195        19.5
+
+--- relacion_parasocial  | categorías: 4 | faltantes: 0
+                                                               frecuencia  porcentaje
+relacion_parasocial                                                                  
+Moderada (sigue a algunos creadores con interés)                      370        37.0
+Fuerte (siente cercanía con creadores, los sigue activamente)         292        29.2
+Débil (los ve pero no siente conexión personal)                       247        24.7
+Inexistente (no sigue creadores ni influenciadores)                    91         9.1
+
+--- pertenencia_comunidades  | categorías: 4 | faltantes: 0
+                                                              frecuencia  porcentaje
+pertenencia_comunidades                                                             
+Activa (participa en grupos o comunidades regularmente)              424        42.4
+Pasiva (pertenece a grupos pero rara vez participa)                  315        31.5
+Ocasional (entra a foros o grupos solo cuando necesita algo)         159        15.9
+Ninguna (no participa en comunidades en línea)                       102        10.2
+
+--- sensibilidad_precio  | categorías: 3 | faltantes: 0
+                                            frecuencia  porcentaje
+sensibilidad_precio                                               
+Alta (solo consume gratis o lo más barato)         439        43.9
+Media (compara antes de pagar)                     381        38.1
+Baja (paga sin pensarlo)                           180        18.0
+
+--- riesgo_gratif_desplazada  | categorías: 3 | faltantes: 0
+                                                                    frecuencia  porcentaje
+riesgo_gratif_desplazada                                                                  
+Alto (frecuentemente termina haciendo algo distinto a lo planeado)         373        37.3
+Bajo (generalmente obtiene lo que buscaba)                                 321        32.1
+Medio (a veces se desvía de su intención original)                         306        30.6
+
+====================================================================================================
+5a. VALORES FALTANTES POR VARIABLE
+====================================================================================================
+No hay valores faltantes (NaN) en ninguna variable.
+Faltantes codificados como texto ('', 'NA', 'N/A', '-', etc.): ninguno
+
+====================================================================================================
+5b. DUPLICADOS
+====================================================================================================
+Filas completamente duplicadas: 0
+IDs duplicados: 0
+Filas duplicadas ignorando 'id': 0
+IDs que no siguen el patrón AUD-####: 0
+Consecutivos faltantes entre AUD-0001 y AUD-1000: ninguno
+Duplicados sobre las 15 numéricas (posibles perfiles idénticos para K-means): 0
+
+====================================================================================================
+5c. RANGOS: VALORES FUERA DEL RANGO DECLARADO EN EL DICCIONARIO
+====================================================================================================
+edad                           rango dicc. [18, 75]  real [18, 75]  fuera de rango: 0
+estrato                        rango dicc. [1, 6]  real [1, 6]  fuera de rango: 0
+horas_diarias_redes            rango dicc. [0.3, 9.0]  real [0.3, 7.8]  fuera de rango: 0
+num_redes_usadas               rango dicc. [1, 9]  real [1, 9]  fuera de rango: 0
+gasto_mensual_contenido_cop    rango dicc. [0, 132500]  real [0, 116524]  fuera de rango: 0
+horas_video_dia                rango dicc. [0.2, 6.5]  real [0.2, 6.5]  fuera de rango: 0
+comparacion_social             rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+nivel_fomo                     rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+ug_entretenimiento             rango dicc. [1, 5]  real [2, 5]  fuera de rango: 0
+ug_informacion                 rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+ug_identidad                   rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+ug_interaccion_social          rango dicc. [1, 5]  real [2, 5]  fuera de rango: 0
+ug_evasion                     rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+ug_pasar_tiempo                rango dicc. [1, 5]  real [1, 5]  fuera de rango: 0
+
+Likert / estrato con valores no enteros: {'edad': 0, 'estrato': 0, 'num_redes_usadas': 0, 'comparacion_social': 0, 'nivel_fomo': 0, 'ug_entretenimiento': 0, 'ug_informacion': 0, 'ug_identidad': 0, 'ug_interaccion_social': 0, 'ug_evasion': 0, 'ug_pasar_tiempo': 0}
+Decimales en horas_diarias_redes: [np.int64(1)]
+
+====================================================================================================
+5d. VALORES ATÍPICOS (regla IQR 1.5) Y CEROS
+====================================================================================================
+edad                           Q1=     27.00 Q3=     49.00 límites=[     -6.00,      82.00]  atípicos=   0  ceros=0
+estrato                        Q1=      2.00 Q3=      3.00 límites=[      0.50,       4.50]  atípicos=  99  ceros=0
+ug_entretenimiento             Q1=      4.00 Q3=      5.00 límites=[      2.50,       6.50]  atípicos=  13  ceros=0
+ug_informacion                 Q1=      3.00 Q3=      4.00 límites=[      1.50,       5.50]  atípicos=  12  ceros=0
+ug_identidad                   Q1=      3.00 Q3=      4.00 límites=[      1.50,       5.50]  atípicos=  31  ceros=0
+ug_interaccion_social          Q1=      3.00 Q3=      4.25 límites=[      1.12,       6.12]  atípicos=   0  ceros=0
+ug_evasion                     Q1=      3.00 Q3=      4.00 límites=[      1.50,       5.50]  atípicos=   5  ceros=0
+ug_pasar_tiempo                Q1=      3.00 Q3=      4.00 límites=[      1.50,       5.50]  atípicos=   1  ceros=0
+horas_diarias_redes            Q1=      2.60 Q3=      4.50 límites=[     -0.25,       7.35]  atípicos=   2  ceros=0
+num_redes_usadas               Q1=      4.00 Q3=      6.00 límites=[      1.00,       9.00]  atípicos=   0  ceros=0
+gasto_mensual_contenido_cop    Q1=      0.00 Q3=  33377.00 límites=[ -50065.50,   83442.50]  atípicos=  47  ceros=322
+horas_video_dia                Q1=      1.30 Q3=      2.80 límites=[     -0.95,       5.05]  atípicos=  20  ceros=0
+comparacion_social             Q1=      3.00 Q3=      4.00 límites=[      1.50,       5.50]  atípicos=  21  ceros=0
+nivel_fomo                     Q1=      3.00 Q3=      5.00 límites=[      0.00,       8.00]  atípicos=   0  ceros=0
+
+====================================================================================================
+5e. CONSISTENCIA LÓGICA ENTRE VARIABLES
+====================================================================================================
+grupo_etario inconsistente con edad: 0
+Registros con horas_video_dia > horas_diarias_redes (no imposible, solo informativo): 30
+Registros con horas_redes + horas_video > 16 h: 0
+
+Gasto mensual por disposicion_pago:
+                  count      mean   median  prop_gasto_0
+disposicion_pago                                        
+Alta                203  67655.91  67981.0          0.00
+Baja                268   7944.32   7862.5          0.03
+Media               214  28322.69  28300.0          0.00
+Ninguna             315      0.00      0.0          1.00
+
+Rango de gasto (min-max) por disposicion_pago (¿tramos solapados o casi deterministas?):
+                    min     max
+disposicion_pago               
+Alta              16717  116524
+Baja                  0   19561
+Media              5000   49231
+Ninguna               0       0
+
+Cruce disposicion_pago x sensibilidad_precio:
+sensibilidad_precio  Alta  Baja  Media
+disposicion_pago                      
+Alta                   22   106     75
+Baja                  138    22    108
+Media                  50    39    125
+Ninguna               229    13     73
+Sensibilidad 'Baja (paga sin pensarlo)' con gasto = 0: 15
+Sensibilidad 'Alta (solo gratis)' con disposicion_pago 'Alta': 22 | gasto mínimo en ese grupo: 29556
+
+plataforma_video_principal='Ninguna' x binge_watching:
+binge_watching              Frecuente (varias veces por semana)  Nunca  Ocasional (fines de semana)  Rara vez  Siempre que puede
+plataforma_video_principal                                                                                                      
+False                                                       186    103                          290       306                 31
+True                                                         17      7                           34        25                  1
+
+Gasto mensual por sensibilidad_precio:
+                                            count     mean   median
+sensibilidad_precio                                                
+Alta (solo consume gratis o lo más barato)    439   9305.0      0.0
+Baja (paga sin pensarlo)                      180  46255.0  43010.0
+Media (compara antes de pagar)                381  24970.0  16414.0
+
+plataforma_video_principal = 'Ninguna' vs horas_video_dia:
+                            count  mean   std  min   25%  50%  75%  max
+plataforma_video_principal                                             
+False                       916.0  2.25  1.11  0.2  1.40  2.1  2.9  6.5
+True                         84.0  0.63  0.38  0.2  0.38  0.5  0.8  1.8
+
+motivo_primario categorías no mapeables a ug_*: []
+% registros donde la ug_* del motivo_primario es (empatada) la más alta: 56.2
+% registros con empate en el puntaje ug_* máximo: 57.2
+Media de cada ug_* según motivo_primario:
+                           ug_entretenimiento  ug_informacion  ug_identidad  ug_interaccion_social  ug_evasion  ug_pasar_tiempo
+motivo_primario                                                                                                                
+Entretenimiento                          4.43            3.59          3.19                   3.76        3.44             3.75
+Evasión y escape                         4.10            3.60          3.22                   3.82        4.25             3.78
+Hábito y pasatiempo                      4.03            3.45          3.27                   3.88        3.43             4.34
+Identidad y autoexpresión                4.05            3.40          4.19                   3.93        3.57             3.74
+Información                              4.03            4.34          3.17                   3.79        3.44             3.76
+Interacción social                       4.12            3.52          3.32                   4.39        3.44             3.74
+
+====================================================================================================
+5f. FORMATO DE TEXTO EN CATEGÓRICAS
+====================================================================================================
+(si no aparece nada arriba, no hay problemas de espacios/mayúsculas)
+
+Categorías observadas vs. listadas en el diccionario (solo diferencias):
+
+====================================================================================================
+5g. BAJA VARIABILIDAD
+====================================================================================================
+edad                           n_unicos=  58  % valor más frecuente=  3.3%  CV=0.377
+estrato                        n_unicos=   6  % valor más frecuente= 36.6%  CV=0.427
+ug_entretenimiento             n_unicos=   4  % valor más frecuente= 50.4%  CV=0.174
+ug_informacion                 n_unicos=   5  % valor más frecuente= 38.3%  CV=0.260
+ug_identidad                   n_unicos=   5  % valor más frecuente= 36.0%  CV=0.292
+ug_interaccion_social          n_unicos=   4  % valor más frecuente= 47.8%  CV=0.198
+ug_evasion                     n_unicos=   5  % valor más frecuente= 41.2%  CV=0.243
+ug_pasar_tiempo                n_unicos=   5  % valor más frecuente= 45.7%  CV=0.207
+horas_diarias_redes            n_unicos=  67  % valor más frecuente=  4.1%  CV=0.380
+num_redes_usadas               n_unicos=   9  % valor más frecuente= 24.1%  CV=0.327
+gasto_mensual_contenido_cop    n_unicos= 678  % valor más frecuente= 32.2%  CV=1.249
+horas_video_dia                n_unicos=  57  % valor más frecuente=  4.8%  CV=0.550
+comparacion_social             n_unicos=   5  % valor más frecuente= 34.9%  CV=0.281
+nivel_fomo                     n_unicos=   5  % valor más frecuente= 33.1%  CV=0.264
+
+genero: categoría dominante 'Femenino' = 50.5% | categoría mínima 'Otro' = 0.7%
+dispositivo_principal: categoría dominante 'Smartphone' = 78.6% | categoría mínima 'Tablet' = 2.9%
+
+====================================================================================================
+5h. ESCALAS (relevante para K-means, que usa distancias)
+====================================================================================================
+                              min       max           std     rango
+edad                         18.0      75.0     14.636089      57.0
+estrato                       1.0       6.0      1.190639       5.0
+ug_entretenimiento            2.0       5.0      0.718852       3.0
+ug_informacion                1.0       5.0      0.948153       4.0
+ug_identidad                  1.0       5.0      0.980335       4.0
+ug_interaccion_social         2.0       5.0      0.782818       3.0
+ug_evasion                    1.0       5.0      0.866620       4.0
+ug_pasar_tiempo               1.0       5.0      0.798838       4.0
+horas_diarias_redes           0.3       7.8      1.332940       7.5
+num_redes_usadas              1.0       9.0      1.711575       8.0
+gasto_mensual_contenido_cop   0.0  116524.0  27381.241051  116524.0
+horas_video_dia               0.2       6.5      1.162722       6.3
+comparacion_social            1.0       5.0      1.002255       4.0
+nivel_fomo                    1.0       5.0      1.012652       4.0
+
+====================================================================================================
+5i. CORRELACIONES ENTRE NUMÉRICAS (|r| >= 0.5)
+====================================================================================================
+horas_diarias_redes            horas_video_dia                r = 0.734
+edad                           nivel_fomo                     r = -0.635
+edad                           comparacion_social             r = -0.557
+
+Matriz completa:
+                             edad  estrato  ug_entretenimiento  ug_informacion  ug_identidad  ug_interaccion_social  ug_evasion  ug_pasar_tiempo  horas_diarias_redes  num_redes_usadas  gasto_mensual_contenido_cop  horas_video_dia  comparacion_social  nivel_fomo
+edad                         1.00    -0.03               -0.11            0.34         -0.23                  -0.18       -0.11            -0.23                -0.41             -0.49                        -0.01            -0.38               -0.56       -0.63
+estrato                     -0.03     1.00                0.01            0.02         -0.01                  -0.01       -0.10            -0.01                -0.03             -0.01                         0.46            -0.00               -0.02       -0.01
+ug_entretenimiento          -0.11     0.01                1.00           -0.08         -0.00                   0.00        0.01             0.01                 0.09              0.07                         0.01             0.09                0.04        0.21
+ug_informacion               0.34     0.02               -0.08            1.00         -0.11                  -0.07       -0.05            -0.07                -0.17             -0.17                         0.04            -0.17               -0.22       -0.23
+ug_identidad                -0.23    -0.01               -0.00           -0.11          1.00                   0.04        0.02             0.05                 0.06              0.12                        -0.02             0.06                0.46        0.10
+ug_interaccion_social       -0.18    -0.01                0.00           -0.07          0.04                   1.00       -0.02             0.03                 0.07              0.08                        -0.01             0.07                0.29        0.33
+ug_evasion                  -0.11    -0.10                0.01           -0.05          0.02                  -0.02        1.00             0.01                 0.09              0.10                        -0.05             0.05                0.10        0.07
+ug_pasar_tiempo             -0.23    -0.01                0.01           -0.07          0.05                   0.03        0.01             1.00                 0.12              0.11                         0.00             0.14                0.12        0.13
+horas_diarias_redes         -0.41    -0.03                0.09           -0.17          0.06                   0.07        0.09             0.12                 1.00              0.18                         0.02             0.73                0.19        0.47
+num_redes_usadas            -0.49    -0.01                0.07           -0.17          0.12                   0.08        0.10             0.11                 0.18              1.00                         0.01             0.15                0.28        0.39
+gasto_mensual_contenido_cop -0.01     0.46                0.01            0.04         -0.02                  -0.01       -0.05             0.00                 0.02              0.01                         1.00             0.01               -0.01       -0.02
+horas_video_dia             -0.38    -0.00                0.09           -0.17          0.06                   0.07        0.05             0.14                 0.73              0.15                         0.01             1.00                0.21        0.39
+comparacion_social          -0.56    -0.02                0.04           -0.22          0.46                   0.29        0.10             0.12                 0.19              0.28                        -0.01             0.21                1.00        0.39
+nivel_fomo                  -0.63    -0.01                0.21           -0.23          0.10                   0.33        0.07             0.13                 0.47              0.39                        -0.02             0.39                0.39        1.00
+
+====================================================================================================
+5j. HOJAS CON ANÁLISIS PREVIO DENTRO DEL ARCHIVO
+====================================================================================================
+Datos+segmento: (1000, 31) | columnas extra respecto a la base: ['nombre_segmento', 'segmento']
+Columnas de la base que NO están en Datos+segmento: ['binge_watching', 'comparacion_social', 'genera_contenido', 'gratificacion_buscada', 'horas_video_dia', 'motivo_primario', 'necesidad_base', 'nivel_fomo', 'pertenencia_comunidades', 'relacion_parasocial', 'riesgo_gratif_desplazada', 'sensibilidad_precio']
+IDs coincidentes: 1000 | celdas diferentes por variable: ninguna
+
+Hoja 'Estadística descriptiva' reporta (medias): edad 38.848, horas 3.5052, redes 5.229, gasto 21924.284, max horas 7.8, max gasto 116524
+Recalculado en la base actual: {'edad': np.float64(38.848), 'horas_diarias_redes': np.float64(3.5052), 'num_redes_usadas': np.float64(5.229), 'gasto_mensual_contenido_cop': np.float64(21924.284)} | max horas 7.8 | max gasto 116524
