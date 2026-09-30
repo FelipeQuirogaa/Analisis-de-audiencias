@@ -1,0 +1,455 @@
+
+====================================================================================================
+TAMAÑOS
+====================================================================================================
+cluster
+0    415
+1    411
+2    174
+
+====================================================================================================
+DISTRIBUCIÓN (%) POR CLUSTER, TOTAL E ÍNDICE vs. TOTAL (100 = promedio)
+====================================================================================================
+
+######## Motivaciones y necesidades
+
+--- motivo_primario
+cluster                       0     1     2  Total   idx0   idx1   idx2
+motivo_primario                                                        
+Hábito y pasatiempo        21.9  16.1  17.8   18.8  117.0   85.0   95.0
+Interacción social         21.4  18.5  23.6   20.6  104.0   90.0  114.0
+Entretenimiento            17.8  20.4  19.0   19.1   93.0  107.0   99.0
+Identidad y autoexpresión  15.4   9.0  11.5   12.1  127.0   74.0   95.0
+Evasión y escape           13.7  13.4  12.6   13.4  102.0  100.0   94.0
+Información                 9.6  22.6  15.5   16.0   60.0  141.0   97.0
+
+--- necesidad_base
+cluster                   0     1     2  Total   idx0   idx1   idx2
+necesidad_base                                                     
+Distracción y placer   24.1  21.2  20.7   22.3  108.0   95.0   93.0
+Descanso emocional     20.2  16.8  18.4   18.5  109.0   91.0   99.0
+Pertenencia            15.2  12.2  16.7   14.2  107.0   86.0  117.0
+Curiosidad             10.8  17.5  13.8   14.1   77.0  124.0   98.0
+Autoexpresión           7.2   3.2   5.7    5.3  136.0   60.0  108.0
+Reconocimiento          7.2   5.6   4.0    6.0  120.0   93.0   67.0
+Conexión emocional      7.2   6.6   8.6    7.2  100.0   91.0  120.0
+Seguridad informativa   6.5  13.1  10.3    9.9   66.0  133.0  104.0
+Control del entorno     1.4   3.9   1.7    2.5   58.0  156.0   69.0
+
+--- gratificacion_buscada
+cluster                        0     1     2  Total   idx0   idx1   idx2
+gratificacion_buscada                                                   
+Relajación                  19.3  15.8  14.4   17.0  113.0   93.0   85.0
+Diversión y risa            10.4  11.7  11.5   11.1   93.0  105.0  104.0
+Llenar el tiempo libre       9.4   6.6   6.3    7.7  122.0   85.0   82.0
+Compartir experiencias       8.9   6.6   9.2    8.0  111.0   82.0  115.0
+Expresar quién soy           8.0   3.6   6.3    5.9  135.0   62.0  107.0
+Tener de qué hablar          7.5   7.5   6.9    7.4  101.0  102.0   93.0
+Desconectarse de la rutina   6.3   6.6   8.0    6.7   94.0   98.0  120.0
+Sentirse acompañado/a        5.1   4.4   7.5    5.2   97.0   84.0  144.0
+Emoción y suspenso           4.8   5.8   6.9    5.6   86.0  104.0  123.0
+Aprender algo nuevo          4.6   6.6   5.7    5.6   82.0  117.0  103.0
+Estar al día                 4.1  11.9   7.5    7.9   52.0  151.0   95.0
+Inspiración creativa         4.1   1.9   2.3    2.9  141.0   67.0   79.0
+Descubrir gustos propios     3.4   3.4   2.9    3.3  102.0  103.0   87.0
+Vivir otras realidades       3.4   3.4   2.3    3.2  105.0  106.0   72.0
+Tomar mejores decisiones     1.0   4.1   2.3    2.5   39.0  165.0   92.0
+
+--- tension_gratificacion
+cluster                                                       0     1     2  Total   idx0   idx1   idx2
+tension_gratificacion                                                                                  
+Satisfacción parcial (encuentra algo pero no exactamente)  24.6  21.9  25.3   23.6  104.0   93.0  107.0
+Satisfacción plena (coincide lo buscado y lo obtenido)     20.0  22.9  31.0   23.1   87.0   99.0  134.0
+Indiferencia (consume sin expectativa clara)               15.4  15.3   7.5   14.0  110.0  109.0   53.0
+Obtiene más de lo que busca (descubrimiento positivo)      14.7  15.8  15.5   15.3   96.0  103.0  101.0
+Frustración leve (demasiado contenido, difícil elegir)     14.2  14.1  12.6   13.9  102.0  102.0   91.0
+Frustración alta (no encuentra lo que busca)               11.1  10.0   8.0   10.1  110.0   99.0   80.0
+
+--- resultado_gratif
+cluster                     0     1     2  Total   idx0   idx1   idx2
+resultado_gratif                                                     
+Frustración              25.3  24.1  20.7   24.0  105.0  100.0   86.0
+Satisfacción parcial     24.6  21.9  25.3   23.6  104.0   93.0  107.0
+Satisfacción plena       20.0  22.9  31.0   23.1   87.0   99.0  134.0
+Indiferencia             15.4  15.3   7.5   14.0  110.0  109.0   53.0
+Descubrimiento positivo  14.7  15.8  15.5   15.3   96.0  103.0  101.0
+
+######## Sociodemográfico
+
+--- genero
+cluster       0     1     2  Total   idx0   idx1   idx2
+genero                                                 
+Femenino   52.3  49.1  49.4   50.5  104.0   97.0   98.0
+Masculino  47.0  50.1  50.0   48.8   96.0  103.0  102.0
+Otro        0.7   0.7   0.6    0.7  103.0  104.0   82.0
+
+--- edad_rango
+cluster        0     1     2  Total   idx0   idx1   idx2
+edad_rango                                              
+25-39       50.4  23.8  37.4   37.2  135.0   64.0  100.0
+18-24       35.2   4.9  16.1   19.4  181.0   25.0   83.0
+40-55       12.3  40.4  32.2   27.3   45.0  148.0  118.0
+56+          2.2  30.9  14.4   16.1   13.0  192.0   89.0
+
+--- grupo_etario
+cluster          0     1     2  Total   idx0   idx1   idx2
+grupo_etario                                              
+25-34         42.7  10.0  26.4   26.4  162.0   38.0  100.0
+18-24         35.2   4.9  16.1   19.4  181.0   25.0   83.0
+35-44         14.5  27.5  21.3   21.0   69.0  131.0  101.0
+45-54          5.5  25.3  20.1   16.2   34.0  156.0  124.0
+55-64          1.4  20.4  11.5   11.0   13.0  186.0  104.0
+65+            0.7  11.9   4.6    6.0   12.0  199.0   77.0
+
+--- nivel_educativo
+cluster                 0     1     2  Total   idx0   idx1   idx2
+nivel_educativo                                                  
+Secundaria           32.5  32.8  18.4   30.2  108.0  109.0   61.0
+Técnico/Tecnológico  32.3  29.0  25.3   29.7  109.0   97.0   85.0
+Universitario        26.0  26.3  31.0   27.0   96.0   97.0  115.0
+Posgrado              6.0   5.6  24.1    9.0   67.0   62.0  268.0
+Primaria o menos      3.1   6.3   1.1    4.1   76.0  154.0   28.0
+
+--- estrato_grupo
+cluster           0     1     2  Total   idx0   idx1   idx2
+estrato_grupo                                              
+Bajo (1-2)     49.2  49.9   6.9   42.1  117.0  118.0   16.0
+Medio (3)      36.4  35.8  39.1   36.6   99.0   98.0  107.0
+Alto (4-6)     14.5  14.4  54.0   21.3   68.0   67.0  254.0
+
+--- region_bogota
+cluster                     0     1     2  Total   idx0   idx1   idx2
+region_bogota                                                        
+Otras regiones/ciudades  79.3  81.3  79.3   80.1   99.0  101.0   99.0
+Bogotá                   20.7  18.7  20.7   19.9  104.0   94.0  104.0
+
+--- region
+cluster             0     1     2  Total   idx0   idx1   idx2
+region                                                       
+Bogotá           20.7  18.7  20.7   19.9  104.0   94.0  104.0
+Región Caribe    18.8  16.3  16.7   17.4  108.0   94.0   96.0
+Antioquia        16.1  18.2  17.8   17.3   93.0  105.0  103.0
+Santanderes      10.1  10.2   9.8   10.1  100.0  101.0   97.0
+Región Central    9.9   8.0   8.6    8.9  111.0   90.0   97.0
+Valle del Cauca   8.9   9.5   9.2    9.2   97.0  103.0  100.0
+Eje Cafetero      8.2   9.5   8.6    8.8   93.0  108.0   98.0
+Otras regiones    7.2   9.5   8.6    8.4   86.0  113.0  103.0
+
+######## Consumo y plataforma
+
+--- plataforma_video_principal
+cluster                        0     1     2  Total   idx0   idx1   idx2
+plataforma_video_principal                                              
+YouTube                     27.0  30.9  28.7   28.9   93.0  107.0   99.0
+Netflix                     25.8  17.8  27.0   22.7  114.0   78.0  119.0
+TikTok                      24.6  12.9  15.5   18.2  135.0   71.0   85.0
+Disney+                      6.5   9.5   9.2    8.2   79.0  116.0  112.0
+Max                          6.3   5.6   4.6    5.7  110.0   98.0   81.0
+Prime Video                  6.3   9.2   8.6    7.9   79.0  117.0  109.0
+Ninguna                      3.6  14.1   6.3    8.4   43.0  168.0   75.0
+
+--- dispositivo_principal
+cluster                   0     1     2  Total   idx0   idx1   idx2
+dispositivo_principal                                              
+Smartphone             82.9  74.7  77.6   78.6  105.0   95.0   99.0
+Computador              8.0  10.7   9.2    9.3   86.0  115.0   99.0
+Smart TV                7.5  10.7   9.8    9.2   81.0  116.0  106.0
+Tablet                  1.7   3.9   3.4    2.9   58.0  134.0  119.0
+
+--- contexto_visionado
+cluster                                 0     1     2  Total   idx0   idx1   idx2
+contexto_visionado                                                               
+Solo/a en smartphone                 31.1  22.4  25.9   26.6  117.0   84.0   97.0
+En familia (TV/pantalla compartida)  25.8  35.0  29.3   30.2   85.0  116.0   97.0
+En pareja                            16.4  17.8  15.5   16.8   98.0  106.0   92.0
+En transporte/desplazamiento         10.8  12.2   9.8   11.2   97.0  109.0   87.0
+Solo/a en computador                  8.7   8.5  13.2    9.4   92.0   91.0  141.0
+Con amigos                            7.2   4.1   6.3    5.8  125.0   71.0  109.0
+
+--- modalidad
+cluster               0     1     2  Total   idx0   idx1   idx2
+modalidad                                                      
+Acompañado/a       49.4  56.9  51.1   52.8   94.0  108.0   97.0
+Solo/a             39.8  30.9  39.1   36.0  110.0   86.0  109.0
+En desplazamiento  10.8  12.2   9.8   11.2   97.0  109.0   87.0
+
+--- binge_watching
+cluster                                 0     1     2  Total   idx0   idx1   idx2
+binge_watching                                                                   
+Rara vez                             32.0  33.6  34.5   33.1   97.0  101.0  104.0
+Ocasional (fines de semana)          29.6  33.3  36.8   32.4   91.0  103.0  114.0
+Frecuente (varias veces por semana)  24.1  18.2  16.1   20.3  119.0   90.0   79.0
+Nunca                                10.4  11.7  10.9   11.0   94.0  106.0   99.0
+Siempre que puede                     3.9   3.2   1.7    3.2  120.0   99.0   54.0
+
+--- maraton
+cluster                         0     1     2  Total   idx0   idx1   idx2
+maraton                                                                  
+Bajo (rara vez/nunca)        42.4  45.3  45.4   44.1   96.0  103.0  103.0
+Ocasional (fines de semana)  29.6  33.3  36.8   32.4   91.0  103.0  114.0
+Alto (siempre/frecuente)     28.0  21.4  17.8   23.5  119.0   91.0   76.0
+
+--- patron_consumo
+cluster                                         0     1     2  Total   idx0   idx1   idx2
+patron_consumo                                                                           
+Maratón (varios episodios seguidos)          25.1  19.0  21.3   21.9  114.0   87.0   97.0
+Un episodio por sesión                       18.6  27.7  28.7   24.1   77.0  115.0  119.0
+De fondo (mientras hace otra cosa)           17.8  14.8  19.5   16.9  106.0   88.0  116.0
+Fragmentado (pausar y retomar días después)  15.9  20.0  13.2   17.1   93.0  117.0   77.0
+Consumo social (ver juntos y comentar)       11.3   9.2   8.6   10.0  113.0   92.0   86.0
+Zapping entre plataformas                    11.3   9.2   8.6   10.0  113.0   92.0   86.0
+
+--- via_llegada
+cluster                                                   0     1     2  Total   idx0   idx1   idx2
+via_llegada                                                                                        
+Algoritmo de la plataforma (recomendación automática)  28.9  20.9  21.8   24.4  119.0   86.0   90.0
+Recomendación de amigos/familia                        20.2  24.3  27.0   23.1   88.0  105.0  117.0
+Redes sociales (publicación o historia)                19.3  14.6  12.6   16.2  119.0   90.0   78.0
+Búsqueda activa (barra de búsqueda)                    13.0  16.5  17.8   15.3   85.0  108.0  116.0
+Tendencias/trending                                     8.0   6.6   5.7    7.0  114.0   94.0   82.0
+Mención en medios/prensa                                5.5   9.7   7.5    7.6   73.0  128.0   98.0
+Publicidad digital                                      5.1   7.3   7.5    6.4   79.0  114.0  117.0
+
+--- descubrimiento
+cluster                                         0     1     2  Total   idx0   idx1   idx2
+descubrimiento                                                                           
+Recomendación social (amigos/familia/redes)  39.5  38.9  39.7   39.3  101.0   99.0  101.0
+Algoritmo/tendencias                         36.9  27.5  27.6   31.4  117.0   88.0   88.0
+Búsqueda activa                              13.0  16.5  17.8   15.3   85.0  108.0  116.0
+Publicidad/medios                            10.6  17.0  14.9   14.0   76.0  122.0  107.0
+
+====================================================================================================
+TOP-3 CATEGORÍAS POR CLUSTER (resumen)
+====================================================================================================
+motivo_primario              C0: Hábito y pasatiempo 21.9% | Interacción social 21.4% | Entretenimiento 17.8%
+motivo_primario              C1: Información 22.6% | Entretenimiento 20.4% | Interacción social 18.5%
+motivo_primario              C2: Interacción social 23.6% | Entretenimiento 19.0% | Hábito y pasatiempo 17.8%
+necesidad_base               C0: Distracción y placer 24.1% | Descanso emocional 20.2% | Pertenencia 15.2%
+necesidad_base               C1: Distracción y placer 21.2% | Curiosidad 17.5% | Descanso emocional 16.8%
+necesidad_base               C2: Distracción y placer 20.7% | Descanso emocional 18.4% | Pertenencia 16.7%
+gratificacion_buscada        C0: Relajación 19.3% | Diversión y risa 10.4% | Llenar el tiempo libre 9.4%
+gratificacion_buscada        C1: Relajación 15.8% | Estar al día 11.9% | Diversión y risa 11.7%
+gratificacion_buscada        C2: Relajación 14.4% | Diversión y risa 11.5% | Compartir experiencias 9.2%
+tension_gratificacion        C0: Satisfacción parcial (encuentra algo pero no exactamente) 24.6% | Satisfacción plena (coincide lo buscado y lo obtenido) 20.0% | Indiferencia (consume sin expectativa clara) 15.4%
+tension_gratificacion        C1: Satisfacción plena (coincide lo buscado y lo obtenido) 22.9% | Satisfacción parcial (encuentra algo pero no exactamente) 21.9% | Obtiene más de lo que busca (descubrimiento positivo) 15.8%
+tension_gratificacion        C2: Satisfacción plena (coincide lo buscado y lo obtenido) 31.0% | Satisfacción parcial (encuentra algo pero no exactamente) 25.3% | Obtiene más de lo que busca (descubrimiento positivo) 15.5%
+resultado_gratif             C0: Frustración 25.3% | Satisfacción parcial 24.6% | Satisfacción plena 20.0%
+resultado_gratif             C1: Frustración 24.1% | Satisfacción plena 22.9% | Satisfacción parcial 21.9%
+resultado_gratif             C2: Satisfacción plena 31.0% | Satisfacción parcial 25.3% | Frustración 20.7%
+genero                       C0: Femenino 52.3% | Masculino 47.0% | Otro 0.7%
+genero                       C1: Masculino 50.1% | Femenino 49.1% | Otro 0.7%
+genero                       C2: Masculino 50.0% | Femenino 49.4% | Otro 0.6%
+edad_rango                   C0: 25-39 50.4% | 18-24 35.2% | 40-55 12.3%
+edad_rango                   C1: 40-55 40.4% | 56+ 30.9% | 25-39 23.8%
+edad_rango                   C2: 25-39 37.4% | 40-55 32.2% | 18-24 16.1%
+grupo_etario                 C0: 25-34 42.7% | 18-24 35.2% | 35-44 14.5%
+grupo_etario                 C1: 35-44 27.5% | 45-54 25.3% | 55-64 20.4%
+grupo_etario                 C2: 25-34 26.4% | 35-44 21.3% | 45-54 20.1%
+nivel_educativo              C0: Secundaria 32.5% | Técnico/Tecnológico 32.3% | Universitario 26.0%
+nivel_educativo              C1: Secundaria 32.8% | Técnico/Tecnológico 29.0% | Universitario 26.3%
+nivel_educativo              C2: Universitario 31.0% | Técnico/Tecnológico 25.3% | Posgrado 24.1%
+estrato_grupo                C0: Bajo (1-2) 49.2% | Medio (3) 36.4% | Alto (4-6) 14.5%
+estrato_grupo                C1: Bajo (1-2) 49.9% | Medio (3) 35.8% | Alto (4-6) 14.4%
+estrato_grupo                C2: Alto (4-6) 54.0% | Medio (3) 39.1% | Bajo (1-2) 6.9%
+region_bogota                C0: Otras regiones/ciudades 79.3% | Bogotá 20.7%
+region_bogota                C1: Otras regiones/ciudades 81.3% | Bogotá 18.7%
+region_bogota                C2: Otras regiones/ciudades 79.3% | Bogotá 20.7%
+region                       C0: Bogotá 20.7% | Región Caribe 18.8% | Antioquia 16.1%
+region                       C1: Bogotá 18.7% | Antioquia 18.2% | Región Caribe 16.3%
+region                       C2: Bogotá 20.7% | Antioquia 17.8% | Región Caribe 16.7%
+plataforma_video_principal   C0: YouTube 27.0% | Netflix 25.8% | TikTok 24.6%
+plataforma_video_principal   C1: YouTube 30.9% | Netflix 17.8% | Ninguna 14.1%
+plataforma_video_principal   C2: YouTube 28.7% | Netflix 27.0% | TikTok 15.5%
+dispositivo_principal        C0: Smartphone 82.9% | Computador 8.0% | Smart TV 7.5%
+dispositivo_principal        C1: Smartphone 74.7% | Smart TV 10.7% | Computador 10.7%
+dispositivo_principal        C2: Smartphone 77.6% | Smart TV 9.8% | Computador 9.2%
+contexto_visionado           C0: Solo/a en smartphone 31.1% | En familia (TV/pantalla compartida) 25.8% | En pareja 16.4%
+contexto_visionado           C1: En familia (TV/pantalla compartida) 35.0% | Solo/a en smartphone 22.4% | En pareja 17.8%
+contexto_visionado           C2: En familia (TV/pantalla compartida) 29.3% | Solo/a en smartphone 25.9% | En pareja 15.5%
+modalidad                    C0: Acompañado/a 49.4% | Solo/a 39.8% | En desplazamiento 10.8%
+modalidad                    C1: Acompañado/a 56.9% | Solo/a 30.9% | En desplazamiento 12.2%
+modalidad                    C2: Acompañado/a 51.1% | Solo/a 39.1% | En desplazamiento 9.8%
+binge_watching               C0: Rara vez 32.0% | Ocasional (fines de semana) 29.6% | Frecuente (varias veces por semana) 24.1%
+binge_watching               C1: Rara vez 33.6% | Ocasional (fines de semana) 33.3% | Frecuente (varias veces por semana) 18.2%
+binge_watching               C2: Ocasional (fines de semana) 36.8% | Rara vez 34.5% | Frecuente (varias veces por semana) 16.1%
+maraton                      C0: Bajo (rara vez/nunca) 42.4% | Ocasional (fines de semana) 29.6% | Alto (siempre/frecuente) 28.0%
+maraton                      C1: Bajo (rara vez/nunca) 45.3% | Ocasional (fines de semana) 33.3% | Alto (siempre/frecuente) 21.4%
+maraton                      C2: Bajo (rara vez/nunca) 45.4% | Ocasional (fines de semana) 36.8% | Alto (siempre/frecuente) 17.8%
+patron_consumo               C0: Maratón (varios episodios seguidos) 25.1% | Un episodio por sesión 18.6% | De fondo (mientras hace otra cosa) 17.8%
+patron_consumo               C1: Un episodio por sesión 27.7% | Fragmentado (pausar y retomar días después) 20.0% | Maratón (varios episodios seguidos) 19.0%
+patron_consumo               C2: Un episodio por sesión 28.7% | Maratón (varios episodios seguidos) 21.3% | De fondo (mientras hace otra cosa) 19.5%
+via_llegada                  C0: Algoritmo de la plataforma (recomendación automática) 28.9% | Recomendación de amigos/familia 20.2% | Redes sociales (publicación o historia) 19.3%
+via_llegada                  C1: Recomendación de amigos/familia 24.3% | Algoritmo de la plataforma (recomendación automática) 20.9% | Búsqueda activa (barra de búsqueda) 16.5%
+via_llegada                  C2: Recomendación de amigos/familia 27.0% | Algoritmo de la plataforma (recomendación automática) 21.8% | Búsqueda activa (barra de búsqueda) 17.8%
+descubrimiento               C0: Recomendación social (amigos/familia/redes) 39.5% | Algoritmo/tendencias 36.9% | Búsqueda activa 13.0%
+descubrimiento               C1: Recomendación social (amigos/familia/redes) 38.9% | Algoritmo/tendencias 27.5% | Publicidad/medios 17.0%
+descubrimiento               C2: Recomendación social (amigos/familia/redes) 39.7% | Algoritmo/tendencias 27.6% | Búsqueda activa 17.8%
+
+====================================================================================================
+CRUCES: MODALIDAD x DESCUBRIMIENTO -> RESULTADO DE LA GRATIFICACIÓN (proxy de retención)
+====================================================================================================
+
+Toda la base:
+resultado_gratif                                                   n  Descubrimiento positivo  Satisfacción plena  Satisfacción parcial  Indiferencia  Frustración  positivo(desc+plena)  riesgo_desplaz_alto  maraton_alto
+combo                                                                                                                                                                                                                      
+Acompañado/a + Recomendación social (amigos/familia/redes)       198                     12.6                25.3                  23.7          14.6         23.7                  37.9                 38.4          15.7
+Acompañado/a + Algoritmo/tendencias                              164                     16.5                23.2                  22.0          13.4         25.0                  39.7                 36.6          28.0
+Solo/a + Recomendación social (amigos/familia/redes)             146                     19.9                21.2                  26.0          13.0         19.9                  41.1                 40.4          29.5
+Solo/a + Algoritmo/tendencias                                    113                     10.6                23.0                  24.8          23.9         17.7                  33.6                 38.9          24.8
+Acompañado/a + Búsqueda activa                                    89                     14.6                27.0                  25.8           7.9         24.7                  41.6                 39.3          23.6
+Acompañado/a + Publicidad/medios                                  77                     18.2                13.0                  24.7          16.9         27.3                  31.2                 33.8          16.9
+Solo/a + Publicidad/medios                                        51                     21.6                15.7                  21.6           9.8         31.4                  37.3                 31.4          27.5
+Solo/a + Búsqueda activa                                          50                      8.0                30.0                  18.0           6.0         38.0                  38.0                 34.0          28.0
+En desplazamiento + Recomendación social (amigos/familia/redes)   49                     20.4                24.5                  28.6          12.2         14.3                  44.9                 42.9          24.5
+En desplazamiento + Algoritmo/tendencias                          37                     13.5                32.4                  13.5          16.2         24.3                  45.9                 37.8          21.6
+En desplazamiento + Búsqueda activa                               14                     14.3                14.3                  21.4          14.3         35.7                  28.6                 21.4          14.3
+En desplazamiento + Publicidad/medios                             12                      8.3                25.0                  25.0           8.3         33.3                  33.3                 16.7          25.0
+
+Cluster 0:
+resultado_gratif                                                  n  Descubrimiento positivo  Satisfacción plena  Satisfacción parcial  Indiferencia  Frustración  positivo(desc+plena)  riesgo_desplaz_alto  maraton_alto
+combo                                                                                                                                                                                                                     
+Acompañado/a + Recomendación social (amigos/familia/redes)       82                      7.3                25.6                  24.4          17.1         25.6                  32.9                 45.1          19.5
+Acompañado/a + Algoritmo/tendencias                              72                     18.1                18.1                  16.7          15.3         31.9                  36.2                 43.1          29.2
+Solo/a + Recomendación social (amigos/familia/redes)             64                     21.9                17.2                  29.7          12.5         18.8                  39.1                 43.8          28.1
+Solo/a + Algoritmo/tendencias                                    59                     11.9                20.3                  28.8          23.7         15.3                  32.2                 39.0          32.2
+Acompañado/a + Búsqueda activa                                   27                     14.8                18.5                  25.9           7.4         33.3                  33.3                 48.1          29.6
+Acompañado/a + Publicidad/medios                                 24                     20.8                 8.3                  33.3           8.3         29.2                  29.1                 58.3          20.8
+Solo/a + Búsqueda activa                                         24                     12.5                29.2                  16.7           8.3         33.3                  41.7                 54.2          37.5
+En desplazamiento + Algoritmo/tendencias                         22                      4.5                22.7                  22.7          22.7         27.3                  27.2                 50.0          31.8
+En desplazamiento + Recomendación social (amigos/familia/redes)  18                     22.2                22.2                  27.8          16.7         11.1                  44.4                 55.6          22.2
+Solo/a + Publicidad/medios                                       18                     22.2                11.1                  27.8          11.1         27.8                  33.3                 33.3          44.4
+En desplazamiento + Búsqueda activa                               3                      0.0                 0.0                   0.0          33.3         66.7                   0.0                 33.3           0.0
+En desplazamiento + Publicidad/medios                             2                      0.0                50.0                   0.0           0.0         50.0                  50.0                 50.0          50.0
+
+Cluster 1:
+resultado_gratif                                                  n  Descubrimiento positivo  Satisfacción plena  Satisfacción parcial  Indiferencia  Frustración  positivo(desc+plena)  riesgo_desplaz_alto  maraton_alto
+combo                                                                                                                                                                                                                     
+Acompañado/a + Recomendación social (amigos/familia/redes)       86                     16.3                23.3                  20.9          17.4         22.1                  39.6                 33.7          12.8
+Acompañado/a + Algoritmo/tendencias                              63                     19.0                20.6                  27.0          11.1         22.2                  39.6                 28.6          27.0
+Solo/a + Recomendación social (amigos/familia/redes)             53                     20.8                24.5                  20.8          13.2         20.8                  45.3                 32.1          39.6
+Acompañado/a + Búsqueda activa                                   43                     14.0                32.6                  20.9           9.3         23.3                  46.6                 30.2          18.6
+Acompañado/a + Publicidad/medios                                 42                     16.7                16.7                  19.0          23.8         23.8                  33.4                 26.2          19.0
+Solo/a + Algoritmo/tendencias                                    37                      2.7                18.9                  24.3          29.7         24.3                  21.6                 35.1          18.9
+En desplazamiento + Recomendación social (amigos/familia/redes)  21                     23.8                23.8                  23.8          14.3         14.3                  47.6                 28.6          19.0
+Solo/a + Publicidad/medios                                       21                     19.0                14.3                  23.8           9.5         33.3                  33.3                 33.3          19.0
+Solo/a + Búsqueda activa                                         16                      6.2                18.8                  18.8           6.2         50.0                  25.0                 18.8          25.0
+En desplazamiento + Algoritmo/tendencias                         13                     23.1                46.2                   0.0           7.7         23.1                  69.3                 23.1           7.7
+En desplazamiento + Búsqueda activa                               9                     11.1                22.2                  22.2          11.1         33.3                  33.3                 22.2          22.2
+En desplazamiento + Publicidad/medios                             7                      0.0                14.3                  42.9          14.3         28.6                  14.3                 14.3          14.3
+
+====================================================================================================
+COMBINACIONES CLAVE DEFINIDAS A PARTIR DEL ESTUDIO (por cluster)
+====================================================================================================
+                                              combinación cluster   n  %_del_cluster  %indiferencia  %frustración  %positivo  %riesgo_desplaz_alto
+            Solo/a + Algoritmo (patrón de abandono E4/E9)       0  59           14.2           23.7          15.3       32.2                  39.0
+            Solo/a + Algoritmo (patrón de abandono E4/E9)       1  37            9.0           29.7          24.3       21.6                  35.1
+            Solo/a + Algoritmo (patrón de abandono E4/E9)   Total 113           11.3           23.9          17.7       33.6                  38.9
+            Solo/a + Recomendación social (patrón E11/E7)       0  64           15.4           12.5          18.8       39.1                  43.8
+            Solo/a + Recomendación social (patrón E11/E7)       1  53           12.9           13.2          20.8       45.3                  32.1
+            Solo/a + Recomendación social (patrón E11/E7)   Total 146           14.6           13.0          19.9       41.1                  40.4
+         Acompañado/a + Recomendación social (patrón E14)       0  82           19.8           17.1          25.6       32.9                  45.1
+         Acompañado/a + Recomendación social (patrón E14)       1  86           20.9           17.4          22.1       39.5                  33.7
+         Acompañado/a + Recomendación social (patrón E14)   Total 198           19.8           14.6          23.7       37.9                  38.4
+Familia en TV/pantalla compartida + Recom. amigos/familia       0  21            5.1           14.3          28.6       42.9                  42.9
+Familia en TV/pantalla compartida + Recom. amigos/familia       1  35            8.5           20.0          25.7       34.3                  31.4
+Familia en TV/pantalla compartida + Recom. amigos/familia   Total  70            7.0           14.3          25.7       38.6                  37.1
+                    Acompañado/a + Algoritmo (patrón E13)       0  72           17.3           15.3          31.9       36.1                  43.1
+                    Acompañado/a + Algoritmo (patrón E13)       1  63           15.3           11.1          22.2       39.7                  28.6
+                    Acompañado/a + Algoritmo (patrón E13)   Total 164           16.4           13.4          25.0       39.6                  36.6
+                           Netflix + Solo/a en smartphone       0  29            7.0            6.9          20.7       44.8                  37.9
+                           Netflix + Solo/a en smartphone       1  15            3.6            6.7          46.7       20.0                  46.7
+                           Netflix + Solo/a en smartphone   Total  57            5.7            7.0          26.3       40.4                  40.4
+                           Motivo Evasión/Hábito + Solo/a       0  54           13.0           18.5          16.7       44.4                  33.3
+                           Motivo Evasión/Hábito + Solo/a       1  39            9.5           17.9          30.8       30.8                  23.1
+                           Motivo Evasión/Hábito + Solo/a   Total 118           11.8           16.1          22.0       40.7                  32.2
+                                 Maratón alto + Algoritmo       0  47           11.3           19.1          21.3       34.0                  36.2
+                                 Maratón alto + Algoritmo       1  25            6.1           20.0          24.0       28.0                  36.0
+                                 Maratón alto + Algoritmo   Total  82            8.2           18.3          20.7       35.4                  37.8
+                               Mujer 40-55 + Acompañado/a       0  17            4.1            5.9          35.3       35.3                  70.6
+                               Mujer 40-55 + Acompañado/a       1  48           11.7           14.6          22.9       37.5                  41.7
+                               Mujer 40-55 + Acompañado/a   Total  77            7.7           11.7          24.7       36.4                  45.5
+                        Hombre 18-24 + Solo/a + Algoritmo       0   8            1.9           37.5          12.5       37.5                  75.0
+                        Hombre 18-24 + Solo/a + Algoritmo       1   1            0.2            0.0         100.0        0.0                 100.0
+                        Hombre 18-24 + Solo/a + Algoritmo   Total  12            1.2           25.0          16.7       50.0                  75.0
+
+====================================================================================================
+GÉNERO: ¿CAMBIA ALGO DENTRO DE CADA CLUSTER? (para la brecha de género)
+====================================================================================================
+
+--- Cluster 0: % por género
+genero                      Femenino  Masculino
+plataforma_video_principal                     
+Disney+                          7.8        5.1
+Max                              6.9        5.6
+Netflix                         27.2       24.1
+Ninguna                          2.3        4.6
+Prime Video                      6.0        6.7
+TikTok                          23.5       25.6
+YouTube                         26.3       28.2 
+
+genero             Femenino  Masculino
+modalidad                             
+Acompañado/a           48.8       50.3
+En desplazamiento      10.1       11.3
+Solo/a                 41.0       38.5 
+
+genero                                       Femenino  Masculino
+descubrimiento                                                  
+Algoritmo/tendencias                             35.5       38.5
+Búsqueda activa                                  15.2       10.8
+Publicidad/medios                                10.6       10.8
+Recomendación social (amigos/familia/redes)      38.7       40.0 
+
+genero                   Femenino  Masculino
+resultado_gratif                            
+Descubrimiento positivo      16.1       13.3
+Frustración                  24.0       26.7
+Indiferencia                 14.7       15.9
+Satisfacción parcial         24.9       24.6
+Satisfacción plena           20.3       19.5 
+
+genero                       Femenino  Masculino
+maraton                                         
+Alto (siempre/frecuente)         28.6       27.2
+Bajo (rara vez/nunca)            42.9       42.6
+Ocasional (fines de semana)      28.6       30.3 
+
+
+--- Cluster 1: % por género
+genero                      Femenino  Masculino
+plataforma_video_principal                     
+Disney+                          9.4        9.7
+Max                              4.0        6.8
+Netflix                         18.3       17.5
+Ninguna                         12.9       15.0
+Prime Video                     10.9        7.8
+TikTok                          12.4       13.6
+YouTube                         32.2       29.6 
+
+genero             Femenino  Masculino
+modalidad                             
+Acompañado/a           54.5       59.2
+En desplazamiento      12.9       11.7
+Solo/a                 32.7       29.1 
+
+genero                                       Femenino  Masculino
+descubrimiento                                                  
+Algoritmo/tendencias                             29.2       25.7
+Búsqueda activa                                  16.3       17.0
+Publicidad/medios                                19.3       15.0
+Recomendación social (amigos/familia/redes)      35.1       42.2 
+
+genero                   Femenino  Masculino
+resultado_gratif                            
+Descubrimiento positivo      15.8       16.0
+Frustración                  23.8       24.8
+Indiferencia                 14.4       15.5
+Satisfacción parcial         25.2       18.9
+Satisfacción plena           20.8       24.8 
+
+genero                       Femenino  Masculino
+maraton                                         
+Alto (siempre/frecuente)         18.8       24.3
+Bajo (rara vez/nunca)            47.0       43.2
+Ocasional (fines de semana)      34.2       32.5 
+
